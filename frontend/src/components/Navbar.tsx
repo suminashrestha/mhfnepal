@@ -1,0 +1,160 @@
+import { Fade } from "hamburger-react";
+import  { useState } from "react";
+import { Button } from "./ui/button";
+import { NavLink } from "react-router-dom";
+
+const NavBar = () => {
+  const [isOpen, setIsOpen] = useState(false);
+  return (
+    <div className="w-full h-20 md:h-20 flex items-center justify-around shadow-md sticky top-0 z-50 bg-white">
+      {/* logo */}
+      <NavLink to="/" className=" flex gap-4 items-center cursor-pointer">
+        <img src="logo.png" alt="mhfnepal" className="h-17 w-17" />
+        <div className="flex flex-col">
+          <span className="text-sm md:text-lg font-bold text-green-600">
+            Mahabir Health Foundation
+          </span>
+          <p className="text-blue-400 text-xs md:text-sm">
+            Building a Healthier Community Together
+          </p>
+        </div>
+      </NavLink>
+
+      {/* mobile menu */}
+      <div className="xl:hidden">
+        <div className="cursor-pointer hover:text-stone-500">
+          <Fade toggled={isOpen} toggle={setIsOpen} />
+        </div>
+
+        <div
+          className={`absolute right-0 top-16 w-full p-5 transition-all duration-300 ease-in-out z-50
+                ${
+                  isOpen
+                    ? "opacity-100 translate-y-0 visible"
+                    : "opacity-0 -translate-y-5 invisible"
+                }`}
+        >
+          <ul
+            className="flex flex-col items-center h-full gap-5 bg-stone-100 p-5 rounded-md shadow-md"
+            onClick={() => setIsOpen((isOpen) => !isOpen)}
+          >
+            <NavLink
+              to="/"
+              className={({ isActive }) =>
+                isActive ? "text-green-500 font-bold" : "hover:text-stone-500"
+              }
+            >
+              Home
+            </NavLink>
+            <NavLink
+              to="/about"
+              className={({ isActive }) =>
+                isActive ? "text-green-500 font-bold" : "hover:text-stone-500"
+              }
+            >
+              About
+            </NavLink>
+            <NavLink
+              to="/ourworks"
+              className={({ isActive }) =>
+                isActive ? "text-green-500 font-bold" : "hover:text-stone-500"
+              }
+            >
+              Our works
+            </NavLink>
+            <NavLink
+              to="/resources"
+              className={({ isActive }) =>
+                isActive ? "text-green-500 font-bold" : "hover:text-stone-500"
+              }
+            >
+              Resources
+            </NavLink>
+            <NavLink
+              to="media"
+              className={({ isActive }) =>
+                isActive ? "text-green-500 font-bold" : "hover:text-stone-500"
+              }
+            >
+              Media
+            </NavLink>
+            <NavLink
+              to="contact"
+              className={({ isActive }) =>
+                isActive ? "text-green-500 font-bold" : "hover:text-stone-500"
+              }
+            >
+              Contact us
+            </NavLink>
+            <NavLink
+              to="donate"
+            >
+              <Button>Donate</Button>
+            </NavLink>
+          </ul>
+        </div>
+      </div>
+
+      {/* desktop menu */}
+      <div className="hidden xl:flex ">
+        <ul className="flex items-center gap-9 w-full">
+          <NavLink
+            to="/"
+            className={({ isActive }) =>
+              isActive ? "text-green-500 font-bold" : "hover:text-stone-500"
+            }
+          >
+            Home
+          </NavLink>
+          <NavLink
+            to="/about"
+            className={({ isActive }) =>
+              isActive ? "text-green-500 font-bold" : "hover:text-stone-500"
+            }
+          >
+            About
+          </NavLink>
+          <NavLink
+            to="/ourworks"
+            className={({ isActive }) =>
+              isActive ? "text-green-500 font-bold" : "hover:text-stone-500"
+            }
+          >
+            Our works
+          </NavLink>
+          <NavLink
+            to="/resources"
+            className={({ isActive }) =>
+              isActive ? "text-green-500 font-bold" : "hover:text-stone-500"
+            }
+          >
+            Resources
+          </NavLink>
+          <NavLink
+            to="media"
+            className={({ isActive }) =>
+              isActive ? "text-green-500 font-bold" : "hover:text-stone-500"
+            }
+          >
+            Media
+          </NavLink>
+          <NavLink
+            to="contact"
+            className={({ isActive }) =>
+              isActive ? "text-green-500 font-bold" : "hover:text-stone-500"
+            }
+          >
+            Contact us
+          </NavLink>
+          <NavLink
+            to="donate"
+          >
+            <Button>Donate</Button>
+          </NavLink>
+        </ul>
+      </div>
+    </div>
+  );
+};
+
+export default NavBar;
