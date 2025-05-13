@@ -1,0 +1,93 @@
+import { NavLink } from "react-router-dom";
+import { Button } from "./ui/button";
+
+import {
+  NavigationMenu,
+  NavigationMenuContent,
+  NavigationMenuItem,
+  NavigationMenuList,
+  NavigationMenuTrigger,
+} from "@/components/ui/navigation-menu";
+
+const NavLinkList = () => {
+  return (
+    <>
+      <NavLink
+        to="/"
+        className={({ isActive }) =>
+          isActive ? "text-green-600 font-bold" : "hover:text-stone-500"
+        }
+      >
+        Home
+      </NavLink>
+      <NavLink
+        to="/about"
+        className={({ isActive }) =>
+          isActive ? "text-green-600 font-bold" : "hover:text-stone-500"
+        }
+      >
+        About
+      </NavLink>
+      <div className="flex md:flex-row gap-4 flex-col items-center justify-center">
+        <NavigationMenu>
+          <NavigationMenuList>
+            <NavigationMenuItem>
+              <NavigationMenuTrigger>Our works</NavigationMenuTrigger>
+              <NavigationMenuContent>
+                <ul className="w-[200px] flex flex-col gap-3 ">
+                  <NavLink to="#" className="hover:bg-stone-100 p-2">Success stories</NavLink>
+                  <NavLink to="#"  className="hover:bg-stone-100 p-2">Our Accomplishments</NavLink>
+                  <NavLink to="#" className="hover:bg-stone-100 p-2">Blogs</NavLink>
+                </ul>
+              </NavigationMenuContent>
+            </NavigationMenuItem>
+          </NavigationMenuList>
+        </NavigationMenu>
+
+        <NavigationMenu>
+          <NavigationMenuList>
+            <NavigationMenuItem>
+              <NavigationMenuTrigger>Research</NavigationMenuTrigger>
+              <NavigationMenuContent>
+                <ul className="w-[200px] flex flex-col gap-3 ">
+                <NavLink to="#"  className="hover:bg-stone-100 p-2">Ongoing projects</NavLink>
+                <NavLink to="#"  className="hover:bg-stone-100 p-2">Case studies</NavLink>
+                <NavLink to="#" className="hover:bg-stone-100 p-2">Collaboration</NavLink>
+                </ul>
+              </NavigationMenuContent>
+            </NavigationMenuItem>
+          </NavigationMenuList>
+        </NavigationMenu>
+
+        <NavigationMenu>
+          <NavigationMenuList>
+            <NavigationMenuItem>
+              <NavigationMenuTrigger>Media</NavigationMenuTrigger>
+              <NavigationMenuContent>
+                <ul className="w-[200px] flex flex-col gap-3 ">
+                <NavLink to="#"  className="hover:bg-stone-100 p-2">Photo gallery</NavLink>
+                <NavLink to="#"  className="hover:bg-stone-100 p-2">Videos</NavLink>
+                <NavLink to="#"  className="hover:bg-stone-100 p-2">Mentions</NavLink>
+                </ul>
+              </NavigationMenuContent>
+            </NavigationMenuItem>
+          </NavigationMenuList>
+        </NavigationMenu>
+      </div>
+
+      <NavLink
+        to="/contact"
+        className={({ isActive }) =>
+          isActive ? "text-green-600 font-bold" : "hover:text-stone-500"
+        }
+      >
+        Contact us
+      </NavLink>
+      <NavLink to="/donate">
+        <Button className="bg-orange-400 hover:bg-orange-300">Donate</Button>
+      </NavLink>
+    </>
+  );
+};
+
+export default NavLinkList;

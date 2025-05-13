@@ -4,12 +4,12 @@ import "./index.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Homepage from "./routes/Homepage.tsx";
 import About from "./routes/About.tsx";
-import { Contact } from "lucide-react";
 import Donate from "./routes/Donate.tsx";
 import Media from "./routes/Media.tsx";
 import OurWorks from "./routes/OurWorks.tsx";
 import Resources from "./routes/Resources.tsx";
 import MainLayout from "./layouts/MainLayout.tsx";
+import ContactUs from "./routes/ContactUs.tsx";
 
 const router = createBrowserRouter([
  {
@@ -25,7 +25,7 @@ const router = createBrowserRouter([
     },
     {
       path: "/contact",
-      element: <Contact />,
+      element: <ContactUs />,
     },
     {
       path: "/donate",
@@ -34,6 +34,9 @@ const router = createBrowserRouter([
     {
       path: "/media",
       element: <Media />,
+    },
+    {
+      path: "/media/photogallery"
     },
     {
       path: "/ourworks",
