@@ -14,7 +14,7 @@ const NavBar = () => {
           <span className="text-sm md:text-lg font-bold text-green-600">
             Mahabir Health Foundation
           </span>
-          <p className="text-blue-400 text-xs md:text-sm">
+          <p className="text-blue-500 text-xs md:text-sm">
             Building a Healthier Community Together
           </p>
         </div>
