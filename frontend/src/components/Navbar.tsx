@@ -6,7 +6,7 @@ import NavLinkList from "./NavLinkList";
 const NavBar = () => {
   const [isOpen, setIsOpen] = useState(false);
   return (
-    <div className="w-full h-20 md:h-20 flex items-center justify-around shadow-md sticky top-0 z-50 bg-white">
+    <div className="w-full h-20  flex items-center justify-around shadow-md fixed top-0 z-50 bg-white">
       {/* logo */}
       <NavLink to="/" className=" flex gap-6 items-center cursor-pointer">
         <img src="logo.png" alt="mhfnepal" className="h-17 w-17" />

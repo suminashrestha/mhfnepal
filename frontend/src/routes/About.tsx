@@ -6,12 +6,10 @@ import {
 } from "@/components/ui/breadcrumb";
 
 import MVCard from "@/components/MVCard";
+import React, { useRef, type RefObject } from "react";
+import TeamCard from "@/components/TeamCard";
 
 const breadcrumbs = [
-  {
-    title: "About",
-    link: "#about",
-  },
   {
     title: "Introduction",
     link: "#introduction",
@@ -30,9 +28,17 @@ const breadcrumbs = [
   },
 ];
 
-const About = () => {
+const About: React.FC = () => {
+  type SectionKey = "introduction" | "misvis" | "values" | "teams" | string;
+
+  const refs: Record<SectionKey, RefObject<HTMLDivElement | null>> = {
+    introduction: useRef<HTMLDivElement | null>(null),
+    misvis: useRef<HTMLDivElement | null>(null),
+    values: useRef<HTMLDivElement | null>(null),
+    teams: useRef<HTMLDivElement | null>(null),
+  };
   return (
-    <div className="px-8 md:px-8 lg:px-16 flex flex-col gap-5 items-center">
+    <div className="px-8 md:px-8 lg:px-16 flex flex-col gap-5 items-center mt-20">
       <div className="w-screen bg-blue-900 text-white text-center py-16 flex flex-col items-center">
         <h1 className="text-xl md:text-3xl font-bold">
           MAHABIR HEALTH FOUNDATION
@@ -41,8 +47,16 @@ const About = () => {
           <BreadcrumbList>
             {breadcrumbs.map((item, index) => (
               <>
-                <BreadcrumbItem key={index}>
-                <a href={item.link}>{item.title}</a>
+                <BreadcrumbItem key={index} className="cursor-pointer">
+                  <span
+                    onClick={() => {
+                      refs[item.link.replace("#", "")]?.current?.scrollIntoView(
+                        { behavior: "smooth" }
+                      );
+                    }}
+                  >
+                    {item.title}
+                  </span>
                 </BreadcrumbItem>
                 <BreadcrumbSeparator />
               </>
@@ -52,8 +66,13 @@ const About = () => {
       </div>
 
       {/* introdiv */}
-      <div className="flex flex-col gap-2 p-4  md:w-2/3 text-sm/normal md:text-lg text-justify border-b-2" id="introduction" >
-        <h1 className=" text-2xl md:text-4xl  font-bold p-3">INTRODUCTION</h1>
+      <div
+        className="flex flex-col gap-2 p-4  md:w-2/3 text-sm/normal md:text-lg text-justify border-b-2"
+        ref={refs.introduction}
+      >
+        <h1 className=" text-2xl md:text-4xl  font-bold p-3 text-blue-950">
+          INTRODUCTION
+        </h1>
         <p className="p-2 ">
           Mahabir Health Foundations was established with the aim of Building a
           Healthier Community through the provision of health services at the
@@ -88,7 +107,10 @@ const About = () => {
         </p>
       </div>
 
-      <div className="flex flex-col gap-8 items-center justify-between p-3 md:w-2/3 text-sm/normal md:text-lg text-justify md:flex-row" id="misvis">
+      <div
+        className="flex flex-col gap-8 items-center justify-between p-3 md:w-2/3 text-sm/normal md:text-lg text-justify md:flex-row"
+        ref={refs.misvis}
+      >
         <MVCard title=" Our Mission">
           Our mission is to promote healthy and sustainable communities by
           providing resources, strengthening collaborative relationships and
@@ -103,8 +125,13 @@ const About = () => {
 
       {/* values */}
 
-      <div className="w-[80%] p-3 md:w-2/3 text-xl/loose border-b-2" id="values">
-        <h1 className="font-bold text-2xl md:text-4xl p-2 ">VALUES</h1>
+      <div
+        className="w-[80%] p-3 md:w-2/3 text-xl/loose border-b-2"
+        ref={refs.values}
+      >
+        <h1 className="font-bold text-2xl md:text-4xl p-2 text-blue-950">
+          VALUES
+        </h1>
         <ul className="list-disc p-5 text-sm/normal md:text-lg/loose">
           <li> We Value our connectivity to the public health community.</li>
           <li> We value innovation and idea driven solutions.</li>
@@ -129,9 +156,22 @@ const About = () => {
         </ul>
       </div>
       {/* teamdiv */}
-      <div className="flex flex-col gap-5 w-screen">
-        <h1 className="text-2xl md:text-4xl font-bold text-center" id="teams">Our Team</h1>
-        <img src="team.jpeg" alt="teamImage" className="shadow-md" />
+      <h1 className="text-2xl md:text-4xl font-bold text-center text-blue-950">
+        Our Team
+      </h1>
+      <div className="w-screen h-auto p-4 flex gap-5 flex-col md:flex-row justify-center">
+        <TeamCard
+          name="Ram Bahadur"
+          image="bossimage.png"
+          position="Founding Chairman & Executive Chief"
+        />
+        <TeamCard name="Ram Bahadur" image="bossimage.png" position="nokarr" />
+        <TeamCard name="Ram Bahadur" image="bossimage.png" position="nokarr" />
+        <TeamCard name="Ram Bahadur" image="bossimage.png" position="nokarr" />
+        <TeamCard name="Ram Bahadur" image="bossimage.png" position="nokarr" />
+      </div>
+      <div className="flex flex-col gap-5 w-screen p-5" ref={refs.teams}>
+        <img src="team.jpeg" alt="teamImage" className="shadow-md rounded-xl" />
       </div>
     </div>
   );
