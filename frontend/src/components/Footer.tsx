@@ -10,7 +10,7 @@ import { Link } from "react-router-dom";
 
 const Footer: React.FC = () => {
   return (
-    <div className="bg-blue-950 h-auto w-screen text-white p-2">
+    <div className="bg-blue-950 h-auto w-screen text-white p-2  bottom-0">
       <div className="flex gap-5 justify-around items-center border-b-1 flex-col md:flex-row">
         <div className="p-3 flex flex-col gap-5">
           <h1 className="text-2xl md:text-3xl font-bold text-center md:text-left">Get in touch</h1>
@@ -30,7 +30,7 @@ const Footer: React.FC = () => {
           </h1>
           <div className="flex gap-2">
             <Input type="email" placeholder="Email" />
-            <Button className="bg-orange-500">Submit</Button>
+            <Button className="bg-orange-400">Submit</Button>
           </div>
         </div>
 

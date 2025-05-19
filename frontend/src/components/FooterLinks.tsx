@@ -10,7 +10,7 @@ const FooterLinks = ({
   type?: string;
 }) => {
   return (
-    <div className="flex gap-3 items-center">
+    <div className="flex gap-3 items-center hover:text-orange-500 cursor-pointer">
       {children}
       <span>
         {type === "" ? title : <a href={`${type}:${title}`}>{title}</a>}

@@ -1,38 +1,69 @@
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-} from "@/components/ui/carousel";
-import Autoplay from "embla-carousel-autoplay";
+import BlogCard from "@/components/BlogCard";
+import { Crousel } from "@/components/Crousel";
 
-const sliderImages = ["homepage1.jpeg", "homepage2.jpeg", "homepage3.jpeg"];
-
+const data = [
+  {
+    title: "The cause for sumina",
+    image: "homepage1.jpeg",
+    description:
+      "Lorem ipsum doluptatem! Qe! Excepturi fugit similique autem, magnam ut rem blanditiis eos natus. Minima, exercitationem soluta ducimus voluptatibus odio saepe? Labore, ad praesentium?",
+  },
+  {
+    title: "sumina",
+    image: "homepage2.jpeg",
+    description:
+      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Alias illum earum voluptatem! Quod iure vero culpa enim ipsa ratione similique! Excepturi fugit similique autem, magnam ut rem blanditiis eos natus. Minima, exercitationem soluta ducimus voluptatibus odio saepe? Labore, ad praesentium?",
+  },
+  {
+    title: "sumina",
+    image: "homepage2.jpeg",
+    description:
+      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Alias illum earum voluptatem! Quod iure vero culpa enim ipsa ratione similique! Excepturi fugit similique autem, magnam ut rem blanditiis eos natus. Minima, exercitationem soluta ducimus voluptatibus odio saepe? Labore, ad praesentium?",
+  },
+  {
+    title: "sumina",
+    image: "homepage1.jpeg",
+    description:
+      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Alias illum earum voluptatem! Quod iure vero culpa enim ipsa ratione similique! Excepturi fugit similique autem, magnam ut rem blanditiis eos natus. Minima, exercitationem soluta ducimus voluptatibus odio saepe? Labore, ad praesentium?",
+  },
+  {
+    title: "sumina",
+    image: "homepage1.jpeg",
+    description:
+      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Alias illum earum voluptatem! Quod iure vero culpa enim ipsa ratione similique! Excepturi fugit similique autem, magnam ut rem blanditiis eos natus. Minima, exercitationem soluta ducimus voluptatibus odio saepe? Labore, ad praesentium?",
+  },
+];
 const Homepage = () => {
   return (
-    <div className=" flex flex-col items-center mt-20 bg-red-500">
-      <div className="box-border w-full h-auto">
-        <Carousel
-          plugins={[Autoplay({ delay: 2000 })]}
-          className="h-auto w-full mx-0 px-0"
-        >
-          <CarouselContent className="h-full w-full">
-            {sliderImages.map((img, index) => (
-              <CarouselItem key={index}>
-                <div className="w-full h-full">
-                  <img
-                    src={img}
-                    alt={`slider image ${index}`}
-                    className="h-full w-full object-cover "
-                  />
-                </div>
-              </CarouselItem>
-            ))}
-          </CarouselContent>
-          <CarouselPrevious className="left-4 z-10 top-1/2 -translate-y-1/2" />
-          <CarouselNext className="right-4 z-10 top-1/2 -translate-y-1/2" />
-        </Carousel>
+    <div className=" flex flex-col items-center mt-20 gap-6 text-blue-950 bg-stone-100">
+      <Crousel />
+      
+
+      {/* mission */}
+      <p className="py-16 px-5 md:px-6 text-xl lg:text-3xl text-center border-b-1 text-gray-600">
+          " We aim in promoting Healthy Practices, People and Places "
+      </p>
+
+
+      {/* objective */}
+
+      <div className="h-screen">
+
+      </div>
+
+      {/* blogs */}
+      <div className=" flex flex-col gap-6">
+        <h2 className="font-bold text-lg md:text-2xl text-center border-b-1 p-3">Recent blogs</h2>
+        <div className="flex flex-col md:grid md:grid-cols-3 lg:grid-cols-4 gap-4 items-center p-5">
+          {data.map((item, index) => (
+            <BlogCard
+              title={item.title}
+              description={item.description}
+              image={item.image}
+              key={index}
+            />
+          ))}
+        </div>
       </div>
     </div>
   );

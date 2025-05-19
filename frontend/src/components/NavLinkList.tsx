@@ -15,7 +15,7 @@ const NavLinkList = () => {
       <NavLink
         to="/"
         className={({ isActive }) =>
-          isActive ? "text-green-600 font-bold" : "hover:text-stone-500"
+          isActive ? "border-b-4" : "hover:text-stone-500"
         }
       >
         Home
@@ -23,7 +23,7 @@ const NavLinkList = () => {
       <NavLink
         to="/about"
         className={({ isActive }) =>
-          isActive ? "text-green-600 font-bold" : "hover:text-stone-500"
+          isActive ? "border-b-4" : "hover:text-stone-500"
         }
       >
         About
@@ -78,7 +78,7 @@ const NavLinkList = () => {
       <NavLink
         to="/contact"
         className={({ isActive }) =>
-          isActive ? "text-green-600 font-bold" : "hover:text-stone-500"
+          isActive ? "border-b-4" : "hover:text-stone-500"
         }
       >
         Contact us
