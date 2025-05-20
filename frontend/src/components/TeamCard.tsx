@@ -1,13 +1,28 @@
-
-
-const TeamCard = ({name, image, position}: {name: string, image: string, position:string}) => {
+const TeamCard = ({
+  name,
+  image,
+  position,
+}: {
+  name: string;
+  image: string;
+  position: string;
+}) => {
   return (
-    <div className="w-auto md:w-[250px] h-auto shadow-md rounded-md bg-stone-100 flex flex-col gap-5 items-center justify-center p-8 transition delay-20 duration-200 ease-in-out hover:-translate-y-1 hover:scale-110">
-        <img src={image} alt={name} className="rounded-full h-[100px] w-[100px]"/>
-        <h3 className="text-sm font-bold">{name}</h3>
-        <h4 className="text-xs text-blue-900 font-semibold text-center">{position}</h4>
+    <div
+      className="relative w-[320px] h-[430px] md:w-full flex flex-col gap-5 items-center p-8 text-white"
+      style={{
+        backgroundImage: `url(${image})`,
+        backgroundPosition: "center",
+        backgroundSize: "cover",
+        backgroundRepeat: "no-repeat",
+      }}
+    >
+      <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/80 to-transparent font-bitter flex flex-col gap-5 ">
+        <h3 className="text-3xl text-center font-light">{name}</h3>
+        <p className="text-sm text-center">{position.toUpperCase()}</p>
+      </div>
     </div>
-  )
-}
+  );
+};
 
-export default TeamCard
+export default TeamCard;

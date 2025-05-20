@@ -14,7 +14,7 @@ export const Crousel = () => {
   return (
     <div className="box-cover w-full h-auto]">
       <Carousel
-        plugins={[Autoplay({ delay: 3000 })]}
+        plugins={[Autoplay({ delay: 2000 })]}
         className="h-full w-full mx-0 px-0 "
       >
         <CarouselContent>

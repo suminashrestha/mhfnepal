@@ -1,13 +1,13 @@
 import { motion } from 'motion/react'
 
-const ImageAnimationVertical = ({image, className}: {image:string,className: string}) => {
+const ImageAnimationVertical = ({image, className}: {image:string,className?: string}) => {
    return (
     <motion.div
-      initial={{ y: -200, opacity: 0 }}             // Start off-screen to the left
-      whileInView={{ y: 0, opacity: 1 }}            // Animate to original position
+      initial={{ y: -200, opacity: 0 }}           
+      whileInView={{ y: 0, opacity: 1 }}            
       transition={{ duration: 0.8, ease: "easeOut" }}
-      viewport={{ once: true, amount: 0.2 }}        // Trigger once when 20% visible
-      className="h-full w-full"
+      viewport={{ once: true }}       
+      className="h-full w-screen"
     >
       <img src={image} alt="" className={className}/>
     </motion.div>

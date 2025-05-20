@@ -7,6 +7,8 @@ import {
 import MVCard from "@/components/MVCard";
 import React, { useRef, type RefObject } from "react";
 import TeamCard from "@/components/TeamCard";
+import HeadingAnimation from "@/components/animations/HeadingAnimation";
+import ImageAnimationHorizontal from "@/components/animations/ImageAnimationHorizontal";
 
 const breadcrumbs = [
   {
@@ -38,40 +40,43 @@ const About: React.FC = () => {
   };
   return (
     <div className="px-8 md:px-8 lg:px-16 flex flex-col gap-5 items-center mt-20">
-      <div className="w-screen bg-blue-900 text-white text-center py-16 flex flex-col items-center">
-        <h1 className="text-xl md:text-3xl font-bold">
-          MAHABIR HEALTH FOUNDATION
-        </h1>
-        <Breadcrumb>
-          <BreadcrumbList>
-            {breadcrumbs.map((item, index) => (
-              <>
-                <BreadcrumbItem key={index} className="cursor-pointer">
-                  <span
-                    onClick={() => {
-                      refs[item.link.replace("#", "")]?.current?.scrollIntoView(
-                        { behavior: "smooth" }
-                      );
-                    }}
-                  >
-                    {item.title}
-                  </span>
-                </BreadcrumbItem>
-                <BreadcrumbSeparator />
-              </>
-            ))}
-          </BreadcrumbList>
-        </Breadcrumb>
+      <div>
+        <div className="w-screen bg-blue-950 text-white text-center h-[10vh] flex flex-col justify-center items-center gap-2">
+          <h1 className="text-lg md:text-2xl lg:text-3xl font-thin font-bitter">
+            MAHABIR HEALTH FOUNDATION
+          </h1>
+          <Breadcrumb>
+            <BreadcrumbList className="text-xs">
+              {breadcrumbs.map((item, index) => (
+                <>
+                  <BreadcrumbItem key={index} className="cursor-pointer">
+                    <span
+                      onClick={() => {
+                        refs[
+                          item.link.replace("#", "")
+                        ]?.current?.scrollIntoView({ behavior: "smooth" });
+                      }}
+                    >
+                      {item.title}
+                    </span>
+                  </BreadcrumbItem>
+                  <BreadcrumbSeparator />
+                </>
+              ))}
+            </BreadcrumbList>
+          </Breadcrumb>
+        </div>
+        <ImageAnimationHorizontal
+          image="aboutus-banner.jpg"
+          className="h-[40vh] w-screen object-cover"
+        />
       </div>
 
       {/* introdiv */}
       <div
-        className="flex flex-col gap-2 p-4  md:w-2/3 text-sm/normal md:text-lg text-justify border-b-2"
+        className="flex flex-col gap-3 p-2  md:w-2/3 text-sm/normal md:text-lg text-justify border-b-2"
         ref={refs.introduction}
       >
-        <h1 className=" text-2xl md:text-4xl  font-bold p-3 text-blue-950">
-          INTRODUCTION
-        </h1>
         <p className="p-2">
           Mahabir Health Foundations was established with the aim of Building a
           Healthier Community through the provision of health services at the
@@ -107,18 +112,22 @@ const About: React.FC = () => {
       </div>
 
       <div
-        className="flex flex-col gap-8 items-center justify-between p-3 md:w-2/3 text-sm/normal md:text-lg text-justify md:flex-row"
+        className="flex flex-col gap-8 items-center justify-between p-3 md:w-2/3 text-sm/normal md:text-lg text-justify"
         ref={refs.misvis}
       >
-        <MVCard title=" Our Mission">
-          Our mission is to promote healthy and sustainable communities by
-          providing resources, strengthening collaborative relationships and
-          supporting the initiatives.
+        <MVCard title="Mission" backgroundImage="home1.jpg">
+          <p className="font-bitter">
+            Our mission is to promote healthy and sustainable communities by
+            strengthening collaborative relationships and supporting different
+            initiatives for accomplishing its vision.
+          </p>
         </MVCard>
-        <MVCard title=" Our Vision">
-          Healthy Practices, People and Places. Our vision is healthy people
-          with healthy practice in healthy communities including spiritual,
-          emotional, physicial, social and economic well-being.
+        <MVCard title="Vision" backgroundImage="grandmother-baby.jpg">
+          <p className="font-bitter">
+            Our vision is promoting communities for better health and prosperity
+            that includes spiritual, emotional, physical, social and economic
+            wellbeing.
+          </p>
         </MVCard>
       </div>
 
@@ -128,9 +137,7 @@ const About: React.FC = () => {
         className="w-[80%] p-3 md:w-2/3 text-xl/loose border-b-2"
         ref={refs.values}
       >
-        <h1 className="font-bold text-2xl md:text-4xl p-2 text-blue-950">
-          VALUES
-        </h1>
+        <HeadingAnimation>Values</HeadingAnimation>
         <ul className="list-disc p-5 text-sm/normal md:text-lg/loose">
           <li> We Value our connectivity to the public health community.</li>
           <li> We value innovation and idea driven solutions.</li>
@@ -155,10 +162,8 @@ const About: React.FC = () => {
         </ul>
       </div>
       {/* teamdiv */}
-      <h1 className="text-2xl md:text-4xl font-bold text-center text-blue-950">
-        Our Team
-      </h1>
-      <div className="w-screen h-auto p-4 flex gap-5 flex-col md:flex-row justify-center">
+      <HeadingAnimation>Our Team</HeadingAnimation>
+      <div className="w-full h-auto p-5 flex flex-col gap-5 items-center md:grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 justify-self-center" ref={refs.teams}>
         <TeamCard
           name="Ram Bahadur"
           image="bossimage.png"
@@ -168,9 +173,6 @@ const About: React.FC = () => {
         <TeamCard name="Ram Bahadur" image="bossimage.png" position="nokarr" />
         <TeamCard name="Ram Bahadur" image="bossimage.png" position="nokarr" />
         <TeamCard name="Ram Bahadur" image="bossimage.png" position="nokarr" />
-      </div>
-      <div className="flex flex-col gap-5 w-screen p-5" ref={refs.teams}>
-        <img src="team.jpeg" alt="teamImage" className="shadow-md rounded-xl" />
       </div>
     </div>
   );

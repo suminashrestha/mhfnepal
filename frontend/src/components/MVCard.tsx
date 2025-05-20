@@ -1,14 +1,39 @@
+import { motion, useScroll } from "motion/react";
+import { useRef } from "react";
+
 const MVCard = ({
   title,
   children,
+  backgroundImage,
 }: {
   title: string;
   children: React.ReactNode;
+  backgroundImage: string;
 }) => {
+  const element = useRef(null);
+  const { scrollYProgress } = useScroll({
+    target: element,
+    offset: ["0 1", "0 0.25"],
+  });
+
   return (
-    <div className="flex flex-col transition delay-20 duration-200 ease-in-out hover:-translate-y-1 hover:scale-105 bg-blue-900 text-white w-full md:w-1/2 rounded-lg shadow-md h-auto  gap-2 justify-center overflow-auto p-4">
-      <h1 className=" text-lg md:text-xl font-bold text-center">{title}</h1>
-      <p className="text-sm  md:text-lg p-7 text-center">{children}</p>
+    <div className="flex flex-col justify-center items-center lg:flex-row w-screen">
+      <motion.div
+        ref={element}
+        style={{
+          scale: scrollYProgress,
+          backgroundImage: `url(${backgroundImage})`,
+          backgroundPosition: "center",
+          backgroundSize: "cover",
+        }}
+        className="flex flex-col text-white w-[320px] h-[320px] md:w-[500px] md:h-[500px] rounded-full shadow-md gap-2 justify-center p-4 "
+      >
+        <h1 className="text-5xl text-center font-bitter font-light">{title}</h1>
+        {/* <p className="text-sm md:text-lg p-7 text-center">{children}</p> */}
+      </motion.div>
+      <div className="w-1/2 h-auto">
+        <p className="text-sm md:text-lg p-7 text-center">{children}</p>
+      </div>
     </div>
   );
 };

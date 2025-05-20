@@ -1,5 +1,5 @@
 import {motion} from "motion/react"
-const ImageAnimationHorizontal = ({image, className}: {image: string, className: string}) => {
+const ImageAnimationHorizontal = ({image, className}: {image: string, className?: string}) => {
   return (
     <motion.div
       initial={{ scaleX: 0.3, opacity: 0 }}             

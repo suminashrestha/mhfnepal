@@ -62,7 +62,7 @@ const Homepage = () => {
             <h1 className=" text-3xl md:text-4xl font-light mb-4 font-bitter text-center border-l-2">
               Mahabir Health Foundation (MHF)
             </h1>
-            <p className="text-sm md:text-lg text-justify">
+            <p className="text-sm md:text-lg text-justify font-bitter">
               Mahabir Health Foundations was established with the aim of
               Building a Healthier Community through the provision of health
               services at the doorstep of community. It strives for changing the
