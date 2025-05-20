@@ -1,27 +1,29 @@
 
-import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "./ui/carousel";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "./ui/carousel";
 import Autoplay from "embla-carousel-autoplay";
 
-const sliderImages = ["homepage1.jpeg", "homepage2.jpeg", "homepage3.jpeg"];
- 
+const sliderImages = ["home1.jpg", "home2.jpg", "home3.jpg"];
 
 export const Crousel = () => {
   return (
-    <div className="box-content w-full h-auto">
+    <div className="box-cover w-full h-auto]">
       <Carousel
-        plugins={[Autoplay({ delay: 2000 })]}
+        plugins={[Autoplay({ delay: 3000 })]}
         className="h-full w-full mx-0 px-0 "
       >
         <CarouselContent>
           {sliderImages.map((img, index) => (
             <CarouselItem key={index}>
-              <div className="w-full h-full">
-                <img
-                  src={img}
-                  alt={`slider image ${index}`}
-                  className="h-full w-full object-cover "
-                />
-              </div>
+              <img
+                src={img}
+                className="h-full w-full object-cover "
+              />
             </CarouselItem>
           ))}
         </CarouselContent>

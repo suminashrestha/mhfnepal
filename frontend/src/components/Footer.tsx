@@ -29,8 +29,8 @@ const Footer: React.FC = () => {
             Subscribe to newsletter
           </h1>
           <div className="flex gap-2">
-            <Input type="email" placeholder="Email" />
-            <Button className="bg-orange-400">Submit</Button>
+            <Input type="email" placeholder=" Provide Email" className="border-none" />
+            <Button className="bg-blue-950 border-1 hover:bg-blue-500 hover:border-none">Submit</Button>
           </div>
         </div>
 
@@ -38,12 +38,12 @@ const Footer: React.FC = () => {
           <div className="flex flex-col gap-5">
             <h1 className="text-lg md:text-2xl font-bold text-center">Quick Links</h1>
             <ul className="grid grid-cols-2 grid-rows-4 gap-6 text-center">
-              <Link to="/" className="hover:text-orange-500">Home</Link>
-              <Link to="/about" className="hover:text-orange-500">About</Link>
-              <Link to="/contact" className="hover:text-orange-500">Contact</Link>
-              <Link to="#" className="hover:text-orange-500">Blogs</Link>
-              <Link to="#" className="hover:text-orange-500">Photo Gallery</Link>
-              <Link to="#" className="hover:text-orange-500">Videos</Link>
+              <Link to="/" className="hover:text-blue-500">Home</Link>
+              <Link to="/about" className="hover:text-blue-500">About</Link>
+              <Link to="/contact" className="hover:text-blue-500">Contact</Link>
+              <Link to="#" className="hover:text-blue-500">Blogs</Link>
+              <Link to="#" className="hover:text-blue-500">Photo Gallery</Link>
+              <Link to="#" className="hover:text-blue-500">Videos</Link>
             </ul>
           </div>
           <div className="flex gap-3">

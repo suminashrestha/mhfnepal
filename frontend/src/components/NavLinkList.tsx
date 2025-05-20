@@ -84,7 +84,7 @@ const NavLinkList = () => {
         Contact us
       </NavLink>
       <NavLink to="/donate">
-        <Button className="bg-orange-400 hover:bg-orange-300">Donate</Button>
+        <Button className="bg-blue-950 hover:bg-blue-500 cursor-pointer duration-300 ease-in">Donate</Button>
       </NavLink>
     </>
   );

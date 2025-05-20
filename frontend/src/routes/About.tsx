@@ -4,7 +4,6 @@ import {
   BreadcrumbList,
   BreadcrumbSeparator,
 } from "@/components/ui/breadcrumb";
-
 import MVCard from "@/components/MVCard";
 import React, { useRef, type RefObject } from "react";
 import TeamCard from "@/components/TeamCard";
@@ -73,7 +72,7 @@ const About: React.FC = () => {
         <h1 className=" text-2xl md:text-4xl  font-bold p-3 text-blue-950">
           INTRODUCTION
         </h1>
-        <p className="p-2 ">
+        <p className="p-2">
           Mahabir Health Foundations was established with the aim of Building a
           Healthier Community through the provision of health services at the
           doorstep of community. It strives for changing the health-service
