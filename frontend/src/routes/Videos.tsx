@@ -8,8 +8,8 @@ const Videos = () => {
           VIDEOS
         </h1>
       </div>
-      <div className="flex flex-col md:flex-row w-full items-center p-7">
-        <section className="bg-white rounded-lg shadow-md p-6 w-1/3 ">
+      <div className="flex flex-col md:flex-row w-full items-center p-7 gap-6">
+        <section className="bg-white rounded-lg shadow-md p-6 ">
           <div className="aspect-w-16 aspect-h-9">
             <iframe
               className="w-full h-96 rounded-lg"
@@ -20,7 +20,7 @@ const Videos = () => {
             ></iframe>
           </div>
         </section>
-        <section className="bg-white rounded-lg shadow-md p-6 w-1/3">
+        <section className="bg-white rounded-lg shadow-md p-6">
           <div className="aspect-w-16 aspect-h-9">
             <iframe
               className="w-full h-96 rounded-lg"
