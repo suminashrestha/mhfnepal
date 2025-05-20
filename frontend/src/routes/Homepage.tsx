@@ -3,7 +3,7 @@ import { Crousel } from "@/components/Crousel";
 
 const data = [
   {
-    title: "The cause for sumina",
+    title: "The cause for sumina is somash manandhar",
     image: "homepage1.jpeg",
     description:
       "Lorem ipsum doluptatem! Qe! Excepturi fugit similique autem, magnam ut rem blanditiis eos natus. Minima, exercitationem soluta ducimus voluptatibus odio saepe? Labore, ad praesentium?",
@@ -40,7 +40,7 @@ const Homepage = () => {
       
 
       {/* mission */}
-      <p className="py-16 px-5 md:px-6 text-xl lg:text-3xl text-center border-b-1 text-gray-600">
+      <p className="py-16 px-5 md:px-6 text-xl lg:text-3xl text-center border-b-2 text-gray-600 font-play">
           " We aim in promoting Healthy Practices, People and Places "
       </p>
 

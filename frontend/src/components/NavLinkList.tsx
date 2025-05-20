@@ -35,9 +35,9 @@ const NavLinkList = () => {
               <NavigationMenuTrigger>Our works</NavigationMenuTrigger>
               <NavigationMenuContent>
                 <ul className="w-[200px] flex flex-col gap-3 ">
-                  <NavLink to="#" className="hover:bg-stone-100 p-2">Success stories</NavLink>
-                  <NavLink to="#"  className="hover:bg-stone-100 p-2">Our Accomplishments</NavLink>
-                  <NavLink to="#" className="hover:bg-stone-100 p-2">Blogs</NavLink>
+                  <NavLink to="/ourworks/success-stories" className="hover:bg-stone-100 p-2">Success stories</NavLink>
+                  <NavLink to="/ourworks/accomplishment"  className="hover:bg-stone-100 p-2">Our Accomplishments</NavLink>
+                  <NavLink to="/ourworks/blogs" className="hover:bg-stone-100 p-2">Blogs</NavLink>
                 </ul>
               </NavigationMenuContent>
             </NavigationMenuItem>
@@ -50,9 +50,9 @@ const NavLinkList = () => {
               <NavigationMenuTrigger>Research</NavigationMenuTrigger>
               <NavigationMenuContent>
                 <ul className="w-[200px] flex flex-col gap-3 ">
-                <NavLink to="#"  className="hover:bg-stone-100 p-2">Ongoing projects</NavLink>
-                <NavLink to="#"  className="hover:bg-stone-100 p-2">Case studies</NavLink>
-                <NavLink to="#" className="hover:bg-stone-100 p-2">Collaboration</NavLink>
+                <NavLink to="/research/ongoing-projects"  className="hover:bg-stone-100 p-2">Ongoing projects</NavLink>
+                <NavLink to="/research/case-studies"  className="hover:bg-stone-100 p-2">Case studies</NavLink>
+                <NavLink to="/research/collaboration" className="hover:bg-stone-100 p-2">Collaboration</NavLink>
                 </ul>
               </NavigationMenuContent>
             </NavigationMenuItem>
@@ -65,9 +65,9 @@ const NavLinkList = () => {
               <NavigationMenuTrigger>Media</NavigationMenuTrigger>
               <NavigationMenuContent>
                 <ul className="w-[200px] flex flex-col gap-3 ">
-                <NavLink to="#"  className="hover:bg-stone-100 p-2">Photo gallery</NavLink>
-                <NavLink to="#"  className="hover:bg-stone-100 p-2">Videos</NavLink>
-                <NavLink to="#"  className="hover:bg-stone-100 p-2">Mentions</NavLink>
+                <NavLink to="/media/photo-gallery"  className="hover:bg-stone-100 p-2">Photo gallery</NavLink>
+                <NavLink to="/media/videos"  className="hover:bg-stone-100 p-2">Videos</NavLink>
+                <NavLink to="/media/mentions"  className="hover:bg-stone-100 p-2">Mentions</NavLink>
                 </ul>
               </NavigationMenuContent>
             </NavigationMenuItem>
