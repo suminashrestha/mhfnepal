@@ -15,23 +15,49 @@ const ThematicAreas = () => {
         <HeadingTag>Thematic Areas</HeadingTag>
       </DivAnimation>
 
-      <div className="flex flex-col gap-8 items-center justify-between p-3 w-screen text-sm/normal md:text-lg text-justify">
-        <MVCard title="Health" backgroundImage="/collab.jpg">
+      <div className="flex flex-col gap-12 items-center justify-between py-8 w-screen text-sm/normal md:text-lg text-justify">
+
+        <MVCard title="Health" backgroundImage="/thematic-areas-images/health.jpg">
           <p className="font-bitter">
-            Our mission is to promote healthy and sustainable communities by
-            strengthening collaborative relationships and supporting different
-            initiatives for accomplishing its vision.
+           We promote accessible healthcare and awareness to improve the well-being of communities through medical support, health camps, and education on hygiene and nutrition.
           </p>
         </MVCard>
+
         <MVCard
-          title="Vision"
-          backgroundImage="vision.jpg"
+          title="Education"
+          backgroundImage="/thematic-areas-images/education.jpg"
           reverse="flex-row-reverse"
         >
           <p className="font-bitter">
-            Our vision is promoting communities for better health and prosperity
-            that includes spiritual, emotional, physical, social and economic
-            wellbeing.
+            Our focus is on empowering individuals through quality education, skill development, and inclusive learning opportunities, especially for underserved groups.
+          </p>
+        </MVCard>
+
+         <MVCard
+          title="Employment"
+          backgroundImage="/thematic-areas-images/employment.jpg"
+        >
+          <p className="font-bitter">
+            We work to create job opportunities through vocational training, entrepreneurship support, and career guidance, aiming to reduce poverty and boost economic independence.
+          </p>
+        </MVCard>
+
+         <MVCard
+          title="Environment"
+          backgroundImage="/thematic-areas-images/environment.jpg"
+          reverse="flex-row-reverse"
+        >
+          <p className="font-bitter">
+            We are committed to environmental protection through awareness programs, tree plantation, clean-up drives, and climate action to build a greener future.
+          </p>
+        </MVCard>
+
+         <MVCard
+          title="Agriculture"
+          backgroundImage="/thematic-areas-images/agriculture.jpg"
+        >
+          <p className="font-bitter">
+            We support sustainable agricultural practices, training, and innovation to help farmers increase productivity, ensure food security, and protect the environment.
           </p>
         </MVCard>
       </div>

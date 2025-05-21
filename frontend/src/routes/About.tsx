@@ -72,14 +72,14 @@ const About: React.FC = () => {
         className="flex flex-col gap-8 items-center justify-between p-3 md:w-2/3 text-sm/normal md:text-lg text-justify"
         ref={refs.misvis}
       >
-        <MVCard title="Mission" backgroundImage="mission.jpg">
+        <MVCard title="Mission" backgroundImage="/mission.jpg" reverse="flex-row-reverse">
           <p className="font-bitter">
             Our mission is to promote healthy and sustainable communities by
             strengthening collaborative relationships and supporting different
             initiatives for accomplishing its vision.
           </p>
         </MVCard>
-        <MVCard title="Vision" backgroundImage="vision.jpg">
+        <MVCard title="Vision" backgroundImage="/vision.jpg" >
           <p className="font-bitter">
             Our vision is promoting communities for better health and prosperity
             that includes spiritual, emotional, physical, social and economic

@@ -3,6 +3,7 @@ import ImageAnimationHorizontal from "@/components/animations/ImageAnimationHori
 import BlogCard from "@/components/BlogCard";
 import { Crousel } from "@/components/Crousel";
 import HeadingTag from "@/components/HeadingTag";
+import MVCard from "@/components/MVCard";
 import { motion, useScroll } from "motion/react";
 import { useRef } from "react";
 const data = [
@@ -112,10 +113,29 @@ const Homepage = () => {
         </DivAnimation>
         <div className="w-1/2 h-auto flex items-center justify-center">
           <ImageAnimationHorizontal
-            image="/homepage-images/home-obj.jpg"
+            image="/homepage-images/objective.jpg"
             className="lg:w-[530px] lg:h-[530px] rounded-full hidden lg:flex object-cover shadow-md "
           />
         </div>
+      </div>
+
+      {/* target-groups */}
+      <div className="h-[80vh] w-screen">
+        <MVCard title="" backgroundImage="/homepage-images/home-obj.jpg">
+          <div className="flex flex-col gap-5 font-bitter">
+            <HeadingTag>Target group</HeadingTag>
+            <ul className="list-inside">
+              <li>Women</li>
+              <li>Children</li>
+              <li>Helpless</li>
+              <li>Old age people</li>
+              <li>Minority Groups</li>
+              <li>Marginalilsed People</li>
+              <li>People with Disabilities</li>
+              <li>People suffering from lifestyle diseases</li>
+            </ul>
+          </div>
+        </MVCard>
       </div>
 
       {/* blogs */}
