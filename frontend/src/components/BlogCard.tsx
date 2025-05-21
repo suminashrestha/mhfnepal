@@ -24,7 +24,7 @@ const BlogCard = ({
         <span className="text-xs">{date}</span>
       </div>
       <p className="text-xs md:text-sm font-extralight">
-        {description.slice(0,200).concat(".....")}
+        {description.slice(0,150).concat(".....")}
       </p>
       <Button className="w-auto bg-blue-950 hover:bg-blue-500 ease-in duration-200">Learn more</Button>
     </div>

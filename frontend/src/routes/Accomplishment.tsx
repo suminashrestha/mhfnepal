@@ -16,23 +16,23 @@ const Accomplishment = () => {
 
       {/* Stats Section */}
       <div className="bg-white py-12 px-4 md:px-8 flex  w-full justify-center ">
-        <div className="max-w-6xl mx-auto">
+        <div className="max-w-6xl mx-auto font-bitter">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-8">
             {/* Stat 1 */}
-            <div className="bg-blue-50 p-4 rounded-lg text-center">
+            <div className="bg-blue-50 p-4  rounded-lg text-center h-[300px] w-[300px] flex flex-col justify-center items-center">
               <p className="text-4xl font-bold text-blue-900">126</p>
               <p className="text-blue-800">Health Camps conducted</p>
             </div>
 
             {/* Stat 2 */}
-            <div className="bg-blue-50 p-4 rounded-lg text-center">
+            <div className="bg-blue-50 p-4 rounded-lg text-center h-[300px] w-[300px] flex flex-col justify-center items-center">
               <p className="text-4xl font-bold text-blue-900">11</p>
               <p className="text-blue-800">School Health awareness Programs</p>
             </div>
 
             {/* Stat 3 */}
-            <div className="bg-blue-50 p-4 rounded-lg text-center">
-              <p className="text-4xl font-bold text-blue-900">10+</p>
+            <div className="bg-blue-50 p-4 rounded-lg text-center h-[300px] w-[300px] flex flex-col justify-center items-center">
+              <p className="text-4xl font-bold text-blue-900 ">10+</p>
               <p className="text-blue-800">Blood donation campaigns</p>
             </div>
           </div>

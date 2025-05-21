@@ -79,8 +79,8 @@ const Homepage = () => {
       </div>
 
       {/* objective */}
-      <div className="w-full h-auto lg:h-screen flex flex-col lg:flex-row p-1 gap-5 items-center">
-        <DivAnimation className="w-full md:w-2/3 lg:w-1/2 flex-col justify-center h-full flex items-center px-5 gap-3">
+      <div className="w-full h-auto lg:h-screen flex flex-col lg:flex-row p-7 gap-12 justify-around items-center">
+        <DivAnimation className="w-full md:w-2/3 lg:w-1/2 flex-col justify-center h-full flex items-center p-2 gap-3 ">
           <HeadingTag>Our Objectives</HeadingTag>
           <ul className="list-disc p-5 text-xs/normal md:text-lg/normal">
             <li>To promote health, education and employment</li>
@@ -111,10 +111,10 @@ const Homepage = () => {
             </li>
           </ul>
         </DivAnimation>
-        <div className="w-1/2 h-full">
+        <div className="w-1/2 h-auto flex items-center justify-center">
           <ImageAnimationHorizontal
             image="/homepage-images/home-obj.jpg"
-            className="w-full h-full hidden lg:block object-cover rounded-full shadow-md "
+            className="lg:w-[530px] lg:h-[530px] rounded-full hidden lg:flex object-cover shadow-md "
           />
         </div>
       </div>

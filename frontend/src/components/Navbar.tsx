@@ -12,10 +12,10 @@ const NavBar = () => {
       <NavLink to="/" className=" flex gap-6 items-center cursor-pointer">
         <img src={logo} alt="mhfnepal" className="h-17 w-17" />
         <div className="flex flex-col">
-          <span className="text-sm md:text-lg font-bold text-green-600">
+          <span className="text-sm md:text-lg font-bold text-blue-900">
             Mahabir Health Foundation
           </span>
-          <p className="text-blue-500 text-xs md:text-sm">
+          <p className="text-green-700 text-xs md:text-sm">
             Building a Healthier Community Together
           </p>
         </div>

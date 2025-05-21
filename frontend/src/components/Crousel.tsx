@@ -8,7 +8,7 @@ import {
 } from "./ui/carousel";
 import Autoplay from "embla-carousel-autoplay";
 
-const sliderImages = ["/banners/homepage-banner-1.jpg", "/banners/homepage-banner-2.jpg", "/banners/homepage-banner-3.jpg"];
+const sliderImages = ["/banners/homepage-banner-2.jpg","/banners/homepage-banner-1.jpg", "/banners/homepage-banner-3.jpg"];
 
 export const Crousel = () => {
   return (
