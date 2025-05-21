@@ -1,5 +1,4 @@
 import DivAnimation from "@/components/animations/DivAnimation";
-import HeadingAnimation from "@/components/animations/DivAnimation";
 import ImageAnimationHorizontal from "@/components/animations/ImageAnimationHorizontal";
 import BlogCard from "@/components/BlogCard";
 import { Crousel } from "@/components/Crousel";

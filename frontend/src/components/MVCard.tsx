@@ -5,10 +5,12 @@ const MVCard = ({
   title,
   children,
   backgroundImage,
+  reverse,
 }: {
   title: string;
   children: React.ReactNode;
   backgroundImage: string;
+  reverse: string;
 }) => {
   const element = useRef(null);
   const { scrollYProgress } = useScroll({
@@ -17,7 +19,9 @@ const MVCard = ({
   });
 
   return (
-    <div className="flex flex-col justify-center items-center lg:flex-row w-screen">
+    <div
+      className={`flex flex-col justify-center items-center lg:${reverse} w-screen `}
+    >
       <motion.div
         ref={element}
         style={{
