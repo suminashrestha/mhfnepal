@@ -1,4 +1,3 @@
-
 import MVCard from "@/components/MVCard";
 import React, { useRef, type RefObject } from "react";
 import TeamCard from "@/components/TeamCard";
@@ -6,7 +5,6 @@ import TeamCard from "@/components/TeamCard";
 import ImageAnimationVertical from "@/components/animations/ImageAnimationVertical";
 import HeadingTag from "@/components/HeadingTag";
 import DivAnimation from "@/components/animations/DivAnimation";
-
 
 const About: React.FC = () => {
   type SectionKey = "introduction" | "misvis" | "values" | "teams" | string;
@@ -92,10 +90,7 @@ const About: React.FC = () => {
 
       {/* values */}
 
-      <DivAnimation
-        className="w-[80%] p-3 md:w-2/3 text-xl/loose border-b-2"
-        ref={refs.values}
-      >
+      <DivAnimation className="w-[80%] p-3 md:w-2/3 text-xl/loose border-b-2">
         <HeadingTag>Values</HeadingTag>
         <ul className="list-disc p-5 text-sm/normal md:text-lg/loose">
           <li> We Value our connectivity to the public health community.</li>
