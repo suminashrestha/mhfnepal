@@ -8,27 +8,27 @@ import { motion, useScroll } from "motion/react";
 import { useRef } from "react";
 const data = [
   {
-    title: "MHN Project in Mountain Region: Some elaboration by Jens Huylebroeck",
+    title:
+      "MHN Project in Mountain Region: Some elaboration by Jens Huylebroeck",
     image: "/banners/homepage-banner-2.jpg",
     description:
       "Lorem ipsum doluptatem! Qe! Excepturi fugit similique autem, magnam ut rem blanditiis eos natus. Minima, exercitationem soluta ducimus voluptatibus odio saepe? Labore, ad praesentium?",
-    date: "2021-03-21"
+    date: "2021-03-21",
   },
   {
-    title: "Our experiences working within a remote community of the Everest Region – Lifechanging!",
+    title:
+      "Our experiences working within a remote community of the Everest Region – Lifechanging!",
     image: "/banners/homepage-banner-3.jpg",
     description:
       "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Alias illum earum voluptatem! Quod iure vero culpa enim ipsa ratione similique! Excepturi fugit similique autem, magnam ut rem blanditiis eos natus. Minima, exercitationem soluta ducimus voluptatibus odio saepe? Labore, ad praesentium?",
-    date: "2021-03-21"
-
+    date: "2021-03-21",
   },
   {
     title: "An indelible health camp in Himalaya – Joshua McCowen",
     image: "/banners/homepage-banner-2.jpg",
     description:
       "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Alias illum earum voluptatem! Quod iure vero culpa enim ipsa ratione similique! Excepturi fugit similique autem, magnam ut rem blanditiis eos natus. Minima, exercitationem soluta ducimus voluptatibus odio saepe? Labore, ad praesentium?",
-    date: "2021-03-21"
-
+    date: "2021-03-21",
   },
 ];
 const Homepage = () => {
@@ -40,7 +40,6 @@ const Homepage = () => {
 
   return (
     <div className=" flex flex-col items-center mt-20 gap-8 text-blue-950 bg-stone-100">
-
       <Crousel />
 
       {/* mission */}
@@ -82,7 +81,7 @@ const Homepage = () => {
       {/* objective */}
       <div className="w-full h-auto lg:h-screen flex flex-col lg:flex-row p-1 gap-5 items-center">
         <DivAnimation className="w-full md:w-2/3 lg:w-1/2 flex-col justify-center h-full flex items-center px-5 gap-3">
-         <HeadingTag>Our Objectives</HeadingTag>
+          <HeadingTag>Our Objectives</HeadingTag>
           <ul className="list-disc p-5 text-xs/normal md:text-lg/normal">
             <li>To promote health, education and employment</li>
             <li>
@@ -114,15 +113,15 @@ const Homepage = () => {
         </DivAnimation>
         <div className="w-1/2 h-full">
           <ImageAnimationHorizontal
-            image="/homepage-images/home-background.jpg"
-            className="w-full h-full hidden lg:block object-cover rounded-md shadow-md"
+            image="/homepage-images/home-obj.jpg"
+            className="w-full h-full hidden lg:block object-cover rounded-full shadow-md "
           />
         </div>
       </div>
 
       {/* blogs */}
       <DivAnimation className=" flex flex-col gap-6 justify-center">
-       <HeadingTag>Recent Blogs</HeadingTag>
+        <HeadingTag>Recent Blogs</HeadingTag>
 
         <div className="flex flex-col md:grid md:grid-cols-3  gap-4 items-center p-5">
           {data.map((item, index) => (

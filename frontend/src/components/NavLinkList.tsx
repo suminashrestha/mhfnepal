@@ -34,10 +34,25 @@ const NavLinkList = () => {
             <NavigationMenuItem>
               <NavigationMenuTrigger>Our works</NavigationMenuTrigger>
               <NavigationMenuContent>
-                <ul className="w-[200px] flex flex-col gap-3 ">
-                  <NavLink to="/ourworks/success-stories" className="hover:bg-stone-100 p-2">Success stories</NavLink>
-                  <NavLink to="/ourworks/accomplishment"  className="hover:bg-stone-100 p-2">Our Accomplishments</NavLink>
-                  <NavLink to="/ourworks/blogs" className="hover:bg-stone-100 p-2">Blogs</NavLink>
+                <ul className="w-[200px] flex flex-col gap-3 text-lg ">
+                  <NavLink
+                    to="/ourworks/thematic-areas"
+                    className="hover:bg-stone-100 p-2"
+                  >
+                    Thematic Areas
+                  </NavLink>
+                  <NavLink
+                    to="/ourworks/accomplishment"
+                    className="hover:bg-stone-100 p-2"
+                  >
+                    Our Accomplishments
+                  </NavLink>
+                  <NavLink
+                    to="/ourworks/blogs"
+                    className="hover:bg-stone-100 p-2"
+                  >
+                    Blogs
+                  </NavLink>
                 </ul>
               </NavigationMenuContent>
             </NavigationMenuItem>
@@ -50,9 +65,19 @@ const NavLinkList = () => {
               <NavigationMenuTrigger>Research</NavigationMenuTrigger>
               <NavigationMenuContent>
                 <ul className="w-[200px] flex flex-col gap-3 ">
-                <NavLink to="/research/ongoing-projects"  className="hover:bg-stone-100 p-2">Ongoing projects</NavLink>
-                <NavLink to="/research/case-studies"  className="hover:bg-stone-100 p-2">Case studies</NavLink>
-                <NavLink to="/research/collaboration" className="hover:bg-stone-100 p-2">Collaboration</NavLink>
+                  <NavLink
+                    to="/research/ongoing-projects"
+                    className="hover:bg-stone-100 p-2"
+                  >
+                    Ongoing projects
+                  </NavLink>
+
+                  <NavLink
+                    to="/research/collaboration"
+                    className="hover:bg-stone-100 p-2"
+                  >
+                    Collaboration
+                  </NavLink>
                 </ul>
               </NavigationMenuContent>
             </NavigationMenuItem>
@@ -65,9 +90,18 @@ const NavLinkList = () => {
               <NavigationMenuTrigger>Media</NavigationMenuTrigger>
               <NavigationMenuContent>
                 <ul className="w-[200px] flex flex-col gap-3 ">
-                <NavLink to="/media/photo-gallery"  className="hover:bg-stone-100 p-2">Photo gallery</NavLink>
-                <NavLink to="/media/videos"  className="hover:bg-stone-100 p-2">Videos</NavLink>
-                <NavLink to="/media/mentions"  className="hover:bg-stone-100 p-2">Mentions</NavLink>
+                  <NavLink
+                    to="/media/photo-gallery"
+                    className="hover:bg-stone-100 p-2"
+                  >
+                    Photo gallery
+                  </NavLink>
+                  <NavLink
+                    to="/media/videos"
+                    className="hover:bg-stone-100 p-2"
+                  >
+                    Videos
+                  </NavLink>
                 </ul>
               </NavigationMenuContent>
             </NavigationMenuItem>
@@ -84,7 +118,9 @@ const NavLinkList = () => {
         Contact us
       </NavLink>
       <NavLink to="/donate">
-        <Button className="bg-blue-950 hover:bg-blue-500 cursor-pointer duration-300 ease-in">Donate</Button>
+        <Button className="bg-blue-950 hover:bg-blue-500 cursor-pointer duration-300 ease-in">
+          Donate
+        </Button>
       </NavLink>
     </>
   );

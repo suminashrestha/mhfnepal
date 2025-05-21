@@ -8,14 +8,12 @@ import Donate from "./routes/Donate.tsx";
 import MainLayout from "./layouts/MainLayout.tsx";
 import ContactUs from "./routes/ContactUs.tsx";
 import Blogs from "./routes/Blogs.tsx";
-import Stories from "./routes/Stories.tsx";
 import OngoingProject from "./routes/OngoingProject.tsx";
-import CaseStudies from "./routes/CaseStudies.tsx";
 import Collaboration from "./routes/Collaboration.tsx";
 import PhotoGallery from "./routes/PhotoGallery.tsx";
 import Videos from "./routes/Videos.tsx";
-import Mentions from "./routes/Mentions.tsx";
 import Accomplishment from "./routes/Accomplishment.tsx";
+import ThematicAreas from "./routes/ThematicAreas.tsx";
 
 const router = createBrowserRouter([
   {
@@ -50,13 +48,13 @@ const router = createBrowserRouter([
             children: [
               {
                 path: ":id",
-                element: <Blogs/>//blogcontent
-              }
-            ]
+                element: <Blogs />, //blogcontent
+              },
+            ],
           },
           {
-            path: "success-stories",
-            element: <Stories />,
+            path: "thematic-areas",
+            element: <ThematicAreas />,
           },
           {
             path: "accomplishment",
@@ -71,10 +69,7 @@ const router = createBrowserRouter([
             path: "ongoing-projects",
             element: <OngoingProject />,
           },
-          {
-            path: "case-studies",
-            element: <CaseStudies />,
-          },
+
           {
             path: "collaboration",
             element: <Collaboration />,
@@ -92,10 +87,6 @@ const router = createBrowserRouter([
           {
             path: "videos",
             element: <Videos />,
-          },
-          {
-            path: "/media/mentions",
-            element: <Mentions />,
           },
         ],
       },

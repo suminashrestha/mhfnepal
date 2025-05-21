@@ -1,20 +1,22 @@
+import DivAnimation from "@/components/animations/DivAnimation";
+import ImageAnimationVertical from "@/components/animations/ImageAnimationVertical";
+import HeadingTag from "@/components/HeadingTag";
 import { useState } from "react";
-import PhotoCard from "@/components/PhotoCard";
 
 const data = [
   { image: "../collab.jpg", caption: "Image1" },
-  { image: "../homepage2.jpeg", caption: "Image2" },
-  { image: "../homepage2.jpeg", caption: "Image3" },
-  { image: "../homepage1.jpeg", caption: "Image4" },
-  { image: "../homepage1.jpeg", caption: "Image5" },
-  { image: "../homepage1.jpeg", caption: "Image6" },
-  { image: "../homepage1.jpeg", caption: "Image7" }, // Example 7th image
-  { image: "../homepage1.jpeg", caption: "Image8" }, // Example 8th image
+  { image: "/mission.jpg", caption: "Image2" },
+  { image: "/mission.jpg", caption: "Image3" },
+  { image: "/banners/homepage-banner-1.jpg", caption: "Image4" },
+  { image: "/banners/homepage-banner-1.jpg", caption: "Image5" },
+  { image: "/banners/homepage-banner-1.jpg", caption: "Image6" },
+  { image: "/banners/homepage-banner-1.jpg", caption: "Image7" }, // Example 7th image
+  { image: "/banners/homepage-banner-1.jpg", caption: "Image8" }, // Example 8th image
 ];
 
 const PhotoGallery = () => {
   const [currentPage, setCurrentPage] = useState(1);
-  const photosPerPage = 6;
+  const photosPerPage = 7;
 
   // Calculate total pages
   const totalPages = Math.ceil(data.length / photosPerPage);
@@ -30,20 +32,25 @@ const PhotoGallery = () => {
   return (
     <div>
       <div className="flex flex-col mt-20">
-        {/* Hero Section */}
-        <div className="flex-row w-full h-40 md:h-70 bg-cover bg-center bg-no-repeat flex items-center justify-center bg-[url(../mountain.jpeg)]">
-          <h1 className="text-2xl md:text-6xl font-bold text-white px-6 py-3 backdrop-blur-sm">
-            Photo Gallery
-          </h1>
-        </div>
+        <ImageAnimationVertical
+          image="/banners/photos-banner.jpeg"
+          className="h-60 md:h-90 w-screen object-cover"
+        />
 
-        {/* Photo Grid */}
-        <div className="flex flex-col md:grid md:grid-cols-2 lg:grid-cols-3 gap-4 items-center p-5">
-          {currentPhotos.map((item, index) => (
-            <PhotoCard image={item.image} key={index} caption={item.caption} />
+        <DivAnimation className="font-bitter flex flex-col gap-5 h-50 justify-center border-b-1">
+          <HeadingTag>Photo Gallery</HeadingTag>
+        </DivAnimation>
+
+        <div className="columns-1 sm:columns-2 lg:columns-3 gap-4 p-4">
+          {currentPhotos.map((image) => (
+            <div key={image.caption} className="mb-4 break-inside-avoid">
+              <img
+                src={image.image}
+                className="w-full rounded-lg shadow-md object-cover"
+              />
+            </div>
           ))}
         </div>
-
         {/* Pagination Controls */}
         {totalPages > 1 && (
           <div className="flex justify-center items-center gap-2 my-6">

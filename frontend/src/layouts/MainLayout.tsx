@@ -8,7 +8,7 @@ const MainLayout = () => {
   const location = useLocation();
 
   return (
-    <div className="font-roboto">
+    <div className="font-roboto overflow-x-hidden">
       <NavBar />
       <AnimatePresence mode="wait">
         <ScrollToTop />

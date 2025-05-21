@@ -1,40 +1,39 @@
+import DivAnimation from "@/components/animations/DivAnimation";
+import ImageAnimationVertical from "@/components/animations/ImageAnimationVertical";
+import HeadingTag from "@/components/HeadingTag";
+
 const Accomplishment = () => {
   return (
     <div className="flex flex-col mt-20">
-      {/* Hero Banner */}
-      <div className="relative w-full h-70 md:h-150 bg-cover bg-center bg-no-repeat flex items-center justify-center bg-[url(/banners/accomplishment-banner.png)]">
-        <div className="absolute inset-0 bg-blue-900/40"></div>
-        <h1 className="relative z-10 text-2xl md:text-6xl font-bold text-white px-6 py-3 backdrop-blur-sm text-center">
-          OUR ACCOMPLISHMENTS
-        </h1>
-      </div>
+      <ImageAnimationVertical
+        image="/banners/accomplishment-banner.png"
+        className="h-60 md:h-90 w-screen object-cover"
+      />
+
+      <DivAnimation className="font-bitter flex flex-col gap-5 h-50 justify-center border-b-1">
+        <HeadingTag>Our Accomplishments</HeadingTag>
+      </DivAnimation>
 
       {/* Stats Section */}
-      <div className="bg-white py-12 px-4 md:px-8">
+      <div className="bg-white py-12 px-4 md:px-8 flex  w-full justify-center ">
         <div className="max-w-6xl mx-auto">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-8">
             {/* Stat 1 */}
             <div className="bg-blue-50 p-4 rounded-lg text-center">
-              <p className="text-4xl font-bold text-blue-900">10+</p>
-              <p className="text-blue-800">Health Centers</p>
+              <p className="text-4xl font-bold text-blue-900">126</p>
+              <p className="text-blue-800">Health Camps conducted</p>
             </div>
 
             {/* Stat 2 */}
             <div className="bg-blue-50 p-4 rounded-lg text-center">
-              <p className="text-4xl font-bold text-blue-900">50K+</p>
-              <p className="text-blue-800">Vaccinations</p>
+              <p className="text-4xl font-bold text-blue-900">11</p>
+              <p className="text-blue-800">School Health awareness Programs</p>
             </div>
 
             {/* Stat 3 */}
             <div className="bg-blue-50 p-4 rounded-lg text-center">
-              <p className="text-4xl font-bold text-blue-900">200+</p>
-              <p className="text-blue-800">Professionals Trained</p>
-            </div>
-
-            {/* Stat 4 */}
-            <div className="bg-blue-50 p-4 rounded-lg text-center">
-              <p className="text-4xl font-bold text-blue-900">100k+</p>
-              <p className="text-blue-800">Lives Touched</p>
+              <p className="text-4xl font-bold text-blue-900">10+</p>
+              <p className="text-blue-800">Blood donation campaigns</p>
             </div>
           </div>
         </div>
@@ -66,10 +65,7 @@ const Accomplishment = () => {
               </div>
               <div>
                 <p className="font-semibold text-blue-900">
-                  Established 5 rural clinics
-                </p>
-                <p className="text-gray-700">
-                  Providing primary care to underserved communities
+                  Organized blood donation camps
                 </p>
               </div>
             </div>
@@ -92,9 +88,9 @@ const Accomplishment = () => {
               </div>
               <div>
                 <p className="font-semibold text-blue-900">
-                  Vaccinated 50k+ people
+                  Distributed relief materials along with medicine to flood
+                  victims
                 </p>
-                <p className="text-gray-700">Against preventable diseases</p>
               </div>
             </div>
 
@@ -116,10 +112,7 @@ const Accomplishment = () => {
               </div>
               <div>
                 <p className="font-semibold text-blue-900">
-                  Trained 200+ health workers
-                </p>
-                <p className="text-gray-700">
-                  Building local healthcare capacity
+                  Conducted 126 health camps and health awareness campaign{" "}
                 </p>
               </div>
             </div>
