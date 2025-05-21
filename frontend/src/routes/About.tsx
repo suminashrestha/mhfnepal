@@ -1,33 +1,12 @@
-import {
-  Breadcrumb,
-  BreadcrumbItem,
-  BreadcrumbList,
-  BreadcrumbSeparator,
-} from "@/components/ui/breadcrumb";
+
 import MVCard from "@/components/MVCard";
 import React, { useRef, type RefObject } from "react";
 import TeamCard from "@/components/TeamCard";
-import HeadingAnimation from "@/components/animations/HeadingAnimation";
-import ImageAnimationHorizontal from "@/components/animations/ImageAnimationHorizontal";
 
-const breadcrumbs = [
-  {
-    title: "Introduction",
-    link: "#introduction",
-  },
-  {
-    title: "mission & vision",
-    link: "#misvis",
-  },
-  {
-    title: "Values",
-    link: "#values",
-  },
-  {
-    title: "Teams",
-    link: "#teams",
-  },
-];
+import ImageAnimationVertical from "@/components/animations/ImageAnimationVertical";
+import HeadingTag from "@/components/HeadingTag";
+import DivAnimation from "@/components/animations/DivAnimation";
+
 
 const About: React.FC = () => {
   type SectionKey = "introduction" | "misvis" | "values" | "teams" | string;
@@ -45,30 +24,10 @@ const About: React.FC = () => {
           <h1 className="text-lg md:text-2xl lg:text-3xl font-thin font-bitter">
             MAHABIR HEALTH FOUNDATION
           </h1>
-          <Breadcrumb>
-            <BreadcrumbList className="text-xs">
-              {breadcrumbs.map((item, index) => (
-                <>
-                  <BreadcrumbItem key={index} className="cursor-pointer">
-                    <span
-                      onClick={() => {
-                        refs[
-                          item.link.replace("#", "")
-                        ]?.current?.scrollIntoView({ behavior: "smooth" });
-                      }}
-                    >
-                      {item.title}
-                    </span>
-                  </BreadcrumbItem>
-                  <BreadcrumbSeparator />
-                </>
-              ))}
-            </BreadcrumbList>
-          </Breadcrumb>
         </div>
-        <ImageAnimationHorizontal
-          image="aboutus-banner.jpg"
-          className="h-[40vh] w-screen object-cover"
+        <ImageAnimationVertical
+          image="/banners/aboutus-banner.jpg"
+          className="h-[40vh] w-screen object-cover "
         />
       </div>
 
@@ -115,14 +74,14 @@ const About: React.FC = () => {
         className="flex flex-col gap-8 items-center justify-between p-3 md:w-2/3 text-sm/normal md:text-lg text-justify"
         ref={refs.misvis}
       >
-        <MVCard title="Mission" backgroundImage="home1.jpg">
+        <MVCard title="Mission" backgroundImage="mission.jpg">
           <p className="font-bitter">
             Our mission is to promote healthy and sustainable communities by
             strengthening collaborative relationships and supporting different
             initiatives for accomplishing its vision.
           </p>
         </MVCard>
-        <MVCard title="Vision" backgroundImage="grandmother-baby.jpg">
+        <MVCard title="Vision" backgroundImage="vision.jpg">
           <p className="font-bitter">
             Our vision is promoting communities for better health and prosperity
             that includes spiritual, emotional, physical, social and economic
@@ -133,11 +92,11 @@ const About: React.FC = () => {
 
       {/* values */}
 
-      <div
+      <DivAnimation
         className="w-[80%] p-3 md:w-2/3 text-xl/loose border-b-2"
         ref={refs.values}
       >
-        <HeadingAnimation>Values</HeadingAnimation>
+        <HeadingTag>Values</HeadingTag>
         <ul className="list-disc p-5 text-sm/normal md:text-lg/loose">
           <li> We Value our connectivity to the public health community.</li>
           <li> We value innovation and idea driven solutions.</li>
@@ -160,20 +119,38 @@ const About: React.FC = () => {
             transparency and quality of response to those we serve.
           </li>
         </ul>
-      </div>
+      </DivAnimation>
       {/* teamdiv */}
-      <HeadingAnimation>Our Team</HeadingAnimation>
-      <div className="w-full h-auto p-5 flex flex-col gap-5 items-center md:grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 justify-self-center" ref={refs.teams}>
-        <TeamCard
-          name="Ram Bahadur"
-          image="bossimage.png"
-          position="Founding Chairman & Executive Chief"
-        />
-        <TeamCard name="Ram Bahadur" image="bossimage.png" position="nokarr" />
-        <TeamCard name="Ram Bahadur" image="bossimage.png" position="nokarr" />
-        <TeamCard name="Ram Bahadur" image="bossimage.png" position="nokarr" />
-        <TeamCard name="Ram Bahadur" image="bossimage.png" position="nokarr" />
-      </div>
+      <DivAnimation className="flex flex-col gap-7 items-center w-screen h-auto p-5">
+        <HeadingTag>Our Team</HeadingTag>
+        <div className="w-full h-auto p-5 flex flex-col gap-5 items-center md:grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 justify-self-center">
+          <TeamCard
+            name="Ram Bahadur"
+            image="bossimage.png"
+            position="Founding Chairman & Executive Chief"
+          />
+          <TeamCard
+            name="Ram Bahadur"
+            image="bossimage.png"
+            position="nokarr"
+          />
+          <TeamCard
+            name="Ram Bahadur"
+            image="bossimage.png"
+            position="nokarr"
+          />
+          <TeamCard
+            name="Ram Bahadur"
+            image="bossimage.png"
+            position="nokarr"
+          />
+          <TeamCard
+            name="Ram Bahadur"
+            image="bossimage.png"
+            position="nokarr"
+          />
+        </div>
+      </DivAnimation>
     </div>
   );
 };

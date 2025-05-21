@@ -6,7 +6,9 @@ import { Button } from "@/components/ui/button";
 const ContactUs = () => {
   return (
     <>
+
       <div className="w-screen p-10 mt-20 flex flex-col lg:flex-row justify-center items-center gap-6 bg-stone-100">
+
         <div className="flex md:flex-col w-auto lg:w-1/2  h-auto justify-between">
           <div className="flex-col gap-3 h-[50%] p-10 md:text-lg ">
             <h2 className="text-4xl md:text-6xl font-bold text-blue-950">Contact Us</h2>
@@ -53,7 +55,7 @@ const ContactUs = () => {
         </div>
 
         <div className="flex h-full w-full md:w-1/2 justify-center items-center p-4 md:p-0">
-          <form className="flex flex-col p-3 md:p-5 lg:p-10 gap-6 w-full lg:w-[80%] h-auto rounded-lg shadow-md text-zinc-600 bg-white bg-[url(maps.jpg)] bg-center ">
+          <form className="flex flex-col p-3 md:p-5 lg:p-10 gap-6 w-full lg:w-[80%] h-auto rounded-lg shadow-md text-zinc-600 bg-white bg-center ">
             <div>
               <h3 className=" text-2xl md:text-4xl lg:text-5xl font-bold text-blue-950">Get in touch</h3>
               <p className="text-sm lg:text-lg">You can reach us anytime</p>

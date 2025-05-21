@@ -42,43 +42,62 @@ const router = createBrowserRouter([
         path: "/media/photogallery",
       },
       {
-        path: "/ourworks/blogs",
-        element: <Blogs />,
+        path: "/ourworks",
+        children: [
+          {
+            path: "blogs",
+            element: <Blogs />,
+            children: [
+              {
+                path: ":id",
+                element: <Blogs/>//blogcontent
+              }
+            ]
+          },
+          {
+            path: "success-stories",
+            element: <Stories />,
+          },
+          {
+            path: "accomplishment",
+            element: <Accomplishment />,
+          },
+        ],
       },
       {
-        path: "/ourworks/success-stories",
-        element: <Stories />,
-      },
-      {
-        path: "/ourworks/accomplishment",
-        element: <Accomplishment />,
-      },
-      {
-        path: "/research/ongoing-projects",
-        element: <OngoingProject />,
-      },
-      {
-        path: "/research/case-studies",
-        element: <CaseStudies />,
-      },
-      {
-        path: "/research/collaboration",
-        element: <Collaboration />,
+        path: "/research",
+        children: [
+          {
+            path: "ongoing-projects",
+            element: <OngoingProject />,
+          },
+          {
+            path: "case-studies",
+            element: <CaseStudies />,
+          },
+          {
+            path: "collaboration",
+            element: <Collaboration />,
+          },
+        ],
       },
 
       {
-        path: "/media/photo-gallery",
-        element: <PhotoGallery />,
-      },
-
-      {
-        path: "/media/videos",
-        element: <Videos />,
-      },
-
-      {
-        path: "/media/mentions",
-        element: <Mentions />,
+        path: "/media",
+        children: [
+          {
+            path: "photo-gallery",
+            element: <PhotoGallery />,
+          },
+          {
+            path: "videos",
+            element: <Videos />,
+          },
+          {
+            path: "/media/mentions",
+            element: <Mentions />,
+          },
+        ],
       },
     ],
   },

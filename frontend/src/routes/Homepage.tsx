@@ -1,20 +1,22 @@
-import HeadingAnimation from "@/components/animations/HeadingAnimation";
+import DivAnimation from "@/components/animations/DivAnimation";
+import HeadingAnimation from "@/components/animations/DivAnimation";
 import ImageAnimationHorizontal from "@/components/animations/ImageAnimationHorizontal";
 import BlogCard from "@/components/BlogCard";
 import { Crousel } from "@/components/Crousel";
+import HeadingTag from "@/components/HeadingTag";
 import { motion, useScroll } from "motion/react";
 import { useRef } from "react";
 const data = [
   {
     title: "MHN Project in Mountain Region: Some elaboration by Jens Huylebroeck",
-    image: "home2.jpg",
+    image: "/banners/homepage-banner-2.jpg",
     description:
       "Lorem ipsum doluptatem! Qe! Excepturi fugit similique autem, magnam ut rem blanditiis eos natus. Minima, exercitationem soluta ducimus voluptatibus odio saepe? Labore, ad praesentium?",
     date: "2021-03-21"
   },
   {
     title: "Our experiences working within a remote community of the Everest Region – Lifechanging!",
-    image: "home3.jpg",
+    image: "/banners/homepage-banner-3.jpg",
     description:
       "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Alias illum earum voluptatem! Quod iure vero culpa enim ipsa ratione similique! Excepturi fugit similique autem, magnam ut rem blanditiis eos natus. Minima, exercitationem soluta ducimus voluptatibus odio saepe? Labore, ad praesentium?",
     date: "2021-03-21"
@@ -22,7 +24,7 @@ const data = [
   },
   {
     title: "An indelible health camp in Himalaya – Joshua McCowen",
-    image: "home2.jpg",
+    image: "/banners/homepage-banner-2.jpg",
     description:
       "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Alias illum earum voluptatem! Quod iure vero culpa enim ipsa ratione similique! Excepturi fugit similique autem, magnam ut rem blanditiis eos natus. Minima, exercitationem soluta ducimus voluptatibus odio saepe? Labore, ad praesentium?",
     date: "2021-03-21"
@@ -49,7 +51,7 @@ const Homepage = () => {
       >
         <p>"Building healthier community together."</p>
       </motion.div>
-      <div className="relative h-screen w-screen bg-[url('grandmother-baby.jpg')] bg-cover bg-center">
+      <div className="relative h-screen w-screen bg-[url('/homepage-images/home-background.jpg')] bg-cover bg-center">
         <div className="absolute inset-0 bg-gradient-to-r from-black to-transparent" />
         <div className="relative z-10 w-full md:w-1/2 h-full flex flex-col justify-center px-10 text-white">
           <motion.div
@@ -79,8 +81,8 @@ const Homepage = () => {
 
       {/* objective */}
       <div className="w-full h-auto lg:h-screen flex flex-col lg:flex-row p-1 gap-5 items-center">
-        <div className="w-full md:w-2/3 lg:w-1/2 flex-col justify-center h-full flex items-center px-5 gap-3">
-         <HeadingAnimation>Our Objectives</HeadingAnimation>
+        <DivAnimation className="w-full md:w-2/3 lg:w-1/2 flex-col justify-center h-full flex items-center px-5 gap-3">
+         <HeadingTag>Our Objectives</HeadingTag>
           <ul className="list-disc p-5 text-xs/normal md:text-lg/normal">
             <li>To promote health, education and employment</li>
             <li>
@@ -109,18 +111,18 @@ const Homepage = () => {
               To establish a rehabilitation and care home for deprived people
             </li>
           </ul>
-        </div>
+        </DivAnimation>
         <div className="w-1/2 h-full">
           <ImageAnimationHorizontal
-            image="grandmother-baby.jpg"
+            image="/homepage-images/home-background.jpg"
             className="w-full h-full hidden lg:block object-cover rounded-md shadow-md"
           />
         </div>
       </div>
 
       {/* blogs */}
-      <div className=" flex flex-col gap-6 justify-center">
-       <HeadingAnimation>Recent Blogs</HeadingAnimation>
+      <DivAnimation className=" flex flex-col gap-6 justify-center">
+       <HeadingTag>Recent Blogs</HeadingTag>
 
         <div className="flex flex-col md:grid md:grid-cols-3  gap-4 items-center p-5">
           {data.map((item, index) => (
@@ -134,7 +136,7 @@ const Homepage = () => {
           ))}
         </div>
         <div />
-      </div>
+      </DivAnimation>
     </div>
   );
 };

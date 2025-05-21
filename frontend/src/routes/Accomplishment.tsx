@@ -2,7 +2,7 @@ const Accomplishment = () => {
   return (
     <div className="flex flex-col mt-20">
       {/* Hero Banner */}
-      <div className="relative w-full h-70 md:h-150 bg-cover bg-center bg-no-repeat flex items-center justify-center bg-[url(../accomplishment.png)]">
+      <div className="relative w-full h-70 md:h-150 bg-cover bg-center bg-no-repeat flex items-center justify-center bg-[url(/banners/accomplishment-banner.png)]">
         <div className="absolute inset-0 bg-blue-900/40"></div>
         <h1 className="relative z-10 text-2xl md:text-6xl font-bold text-white px-6 py-3 backdrop-blur-sm text-center">
           OUR ACCOMPLISHMENTS

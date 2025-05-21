@@ -2,6 +2,7 @@ import { Fade } from "hamburger-react";
 import { useState } from "react";
 import { NavLink } from "react-router-dom";
 import NavLinkList from "./NavLinkList";
+import logo from "../assets/images/logo.png"
 
 const NavBar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -9,7 +10,7 @@ const NavBar = () => {
     <div className="w-full h-20 flex items-center justify-around shadow-md fixed top-0 z-50 bg-white">
       {/* logo */}
       <NavLink to="/" className=" flex gap-6 items-center cursor-pointer">
-        <img src="logo.png" alt="mhfnepal" className="h-17 w-17" />
+        <img src={logo} alt="mhfnepal" className="h-17 w-17" />
         <div className="flex flex-col">
           <span className="text-sm md:text-lg font-bold text-green-600">
             Mahabir Health Foundation
