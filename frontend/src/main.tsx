@@ -2,20 +2,26 @@ import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import "./index.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import Homepage from "./routes/Homepage.tsx";
-import About from "./routes/About.tsx";
-import Donate from "./routes/Donate.tsx";
+import Homepage from "./routes/user/Homepage.tsx";
+import About from "./routes/user/About.tsx";
+import Donate from "./routes/user/Donate.tsx";
 import MainLayout from "./layouts/MainLayout.tsx";
-import ContactUs from "./routes/ContactUs.tsx";
-import Blogs from "./routes/Blogs.tsx";
-import OngoingProject from "./routes/OngoingProject.tsx";
-import Collaboration from "./routes/Collaboration.tsx";
-import PhotoGallery from "./routes/PhotoGallery.tsx";
-import Videos from "./routes/Videos.tsx";
-import Accomplishment from "./routes/Accomplishment.tsx";
-import ThematicAreas from "./routes/ThematicAreas.tsx";
+import ContactUs from "./routes/user/ContactUs.tsx";
+import Blogs from "./routes/user/Blogs.tsx";
+import OngoingProject from "./routes/user/OngoingProject.tsx";
+import Collaboration from "./routes/user/Collaboration.tsx";
+import PhotoGallery from "./routes/user/PhotoGallery.tsx";
+import Videos from "./routes/user/Videos.tsx";
+import Accomplishment from "./routes/user/Accomplishment.tsx";
+import ThematicAreas from "./routes/user/ThematicAreas.tsx";
+import AdminLayout from "./layouts/AdminLayout.tsx";
 
 const router = createBrowserRouter([
+  // Admin route
+  {
+    path: "/admin-secret-3948jd", // ← only you know this route
+    element: < AdminLayout/>,
+  },
   {
     element: <MainLayout />,
     children: [
